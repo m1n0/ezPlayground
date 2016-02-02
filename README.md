@@ -1,4 +1,5 @@
 YOU MUST DROP THE ezdev db that is created and run `CREATE DATABASE ezdev CHARACTER SET utf8;` as it requires the utf8 charset
+You must run composer install locally for development
 
 
 eZ Publish 4 (Referred to as `legacy` in eZ Publish 5.x) [![Build Status](https://secure.travis-ci.org/ezsystems/ezpublish-legacy.png)](http://travis-ci.org/ezsystems/ezpublish-legacy)
