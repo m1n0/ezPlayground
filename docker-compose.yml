@@ -13,7 +13,7 @@ mysql:
     image: mysql
     environment:
         MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: ezdev
+        MYSQL_DATABASE: ezplatform
         MYSQL_USER: ezuser
         MYSQL_PASSWORD: ezpass
     expose:

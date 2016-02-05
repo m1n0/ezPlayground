@@ -5,10 +5,11 @@ MAINTAINER Samuel ROZE <samuel.roze@gmail.com>
 # PHP extension
 RUN requirements="libfreetype6-dev libxml2 libxml2-dev libxslt1-dev libjpeg62-turbo-dev libpng12-dev libssl-dev zlib1g-dev libicu-dev libmcrypt-dev zlib1g-dev libicu-dev git curl" \
     && apt-get update && apt-get install -y $requirements && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install mysqli\
+    && docker-php-ext-install pdo_mysql mysqli\
     && docker-php-ext-install mbstring iconv opcache mcrypt bcmath xsl\
     && docker-php-ext-install intl \
     && docker-php-ext-install zip \
+    && docker-php-ext-install exif \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd \
     && apt-get purge --auto-remove -y
