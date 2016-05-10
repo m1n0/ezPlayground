@@ -54,7 +54,7 @@
     "scripts": {
         "update-parameters": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ]
+        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
