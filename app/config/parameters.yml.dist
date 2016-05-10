@@ -13,11 +13,11 @@ parameters:
     # Settings for database backend used by Doctrine DBAL
     # In turn used for Content Repository Persistence, and default database powered search engine
     database_driver: pdo_mysql
-    database_host: localhost
+    database_host: mysql
     database_port: ~
-    database_name: ezplatform
-    database_user: root
-    database_password:
+    database_name: ezdev
+    database_user: ezuser
+    database_password: ezpass
 
     # One of `legacy` (default) or `solr`
     search_engine: legacy
