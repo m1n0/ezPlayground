@@ -1,0 +1,16 @@
+/app/check.php
+/app/SymfonyRequirements.php
+/app/cache/
+/app/logs/
+/app/config/parameters.yml
+/app/config/parameters.yml
+/app/bootstrap.php.cache
+/bin
+/vendor
+/web/bundles/
+/web/css/
+/web/js/
+/web/share
+/web/var
+/web/.htaccess
+
