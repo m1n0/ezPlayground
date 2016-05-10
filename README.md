@@ -51,4 +51,5 @@ That will produce an output similar to (if you used the default project dir):
 ```
 
 Site: [http://dockerezplatform_web.docker](http://dockerezplatform_web.docker)
+
 Admin: [http://dockerezplatform_web.docker/ez](http://dockerezplatform_web.docker/ez) (by default the username is `admin` and the password `publish`)
