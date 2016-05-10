@@ -52,6 +52,9 @@
         "ezsystems/legacy-bridge": "Provides the full legacy backoffice and legacy features"
     },
     "scripts": {
+        "update-parameters": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
