@@ -1,0 +1,42 @@
+{% extends "pagelayout.html.twig" %}
+{% block content %}
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <h3 class="center bottom-plus new-header">{{ ez_content_name(content) }}</h3>
+    <div class="col-xs-10 text-justified">
+        <tr>
+            <td>
+                {{ ez_render_field( content, 'image', { parameters: { 'alias': 'small' }} ) }}
+            </td>
+            <td>
+                <strong>
+                    <a href="{{ path( "ez_urlalias", { 'locationId': content.contentInfo.mainLocationId } ) }}"
+                       target="_self">
+                        {{ ez_content_name( content ) }}
+                    </a>
+                </strong>
+                <p class="pre-small">
+                    {{ ez_render_field( content, 'author') }}
+                </p>
+            </td>
+            <td>
+                {{ ez_render_field(content, 'starting_point', {'parameters': {'width': '100%', 'height': '100px', 'showMap': true, 'showInfo': true }}
+                ) }}
+            </td>
+            <td>
+                {{ ez_render_field(content, 'ending_point', {'parameters': {'width': '100%', 'height': '100px', 'showMap': true, 'showInfo': true }}
+                ) }}
+            </td>
+            <td>
+                <p>{{ ez_render_field( content, 'length' ) }} Km</p>
+            </td>
+            <td>
+                <p>{{ ez_render_field( content, 'level' ) }}</p>
+            </td>
+        </tr>
+        <tr>
+            {% for point_of_interest in content.fields.pois['eng-GB'].destinationContentIds %}
+                {{ render( controller( 'ez_content:viewLocation', { 'contentId': point_of_interest, 'viewType': 'line' } )) }}
+            {% endfor %}
+        </tr>
+    </div>
+{% endblock %}

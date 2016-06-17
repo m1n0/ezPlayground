@@ -1,0 +1,9 @@
+{% extends "pagelayout.html.twig" %}
+
+{% block content %}
+{% for event in pagerEvents %}
+    <li>
+        <a href="{{ path('ez_urlalias', {'locationId' : event.versionInfo.contentInfo.mainLocationId}) }}">{{ ez_content_name(event) }}</a>
+    </li>
+{% endfor %}
+{% endblock content %}

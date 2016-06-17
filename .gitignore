@@ -13,4 +13,8 @@
 /web/share
 /web/var
 /web/.htaccess
-
+/web/assets/images
+/docker
+/doc
+docker-compose.yml
+Dockerfile
